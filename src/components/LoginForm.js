@@ -38,7 +38,8 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
+    console.log('FIELDS: ', fields)
+    console.log('LOGIN DATA: ', loginData)
     loginUser({
       variables: {
         input: {
@@ -48,7 +49,7 @@ const LoginForm = () => {
         },
       },
     }).then((response) => {
-      // console.log("Response", response)
+      console.log("Response", response)
       const { login } = response.data
 
       if(login) {

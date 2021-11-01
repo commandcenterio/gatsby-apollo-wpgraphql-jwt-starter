@@ -31,6 +31,7 @@ const authMiddleware = new ApolloLink((operation, forward) => {
   operation.setContext({
     headers: {
       Authorization: token ? `Bearer ${token}` : '',
+      'Access-Control-Allow-Origin': '*',
     },
   })
 

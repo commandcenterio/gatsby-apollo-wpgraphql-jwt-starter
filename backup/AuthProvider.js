@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }) => {
         },
       }).then((response) => {
         console.log("Response", response)
-        // console.log("Data", data)
+        console.log("Data", data)
         const { login } = response.data
         const user = (login && login.user) ? login.user : {}
 
